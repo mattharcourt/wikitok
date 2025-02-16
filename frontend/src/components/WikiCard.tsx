@@ -50,12 +50,16 @@ export function WikiCard({ article }: WikiCardProps) {
         <div className="h-screen w-full flex items-center justify-center snap-start relative">
             <div className="h-full w-full relative">
                 {article.thumbnail ? (
-                    <div className="absolute inset-0">
+                    <div
+                        style={{ '--bg-image': `url('${article.thumbnail.source}')` }}
+                        className={`absolute inset-0 lg:bg-cover lg:bg-[image:var(--bg-image)]`}
+                    >
+                        <div className="absolute inset-0 lg:bg-black lg:opacity-50"/>
                         <img
                             loading="lazy"
                             src={article.thumbnail.source}
                             alt={article.title}
-                            className={`w-full h-full object-cover lg:object-contain transition-opacity duration-300 bg-white ${imageLoaded ? 'opacity-100' : 'opacity-0'
+                            className={`w-full h-full lg:relative lg:inset-1/20 lg:w-9/10 lg:h-9/10 object-cover lg:object-contain transition-opacity duration-300 bg-white lg:bg-transparent ${imageLoaded ? 'opacity-100' : 'opacity-0'
                                 }`}
                             onLoad={() => setImageLoaded(true)}
                             onError={(e) => {
