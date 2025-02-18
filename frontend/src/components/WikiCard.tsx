@@ -48,7 +48,7 @@ export function WikiCard({ article }: WikiCardProps) {
 
     return (
         <div className="h-screen w-full flex items-center justify-center snap-start relative" onDoubleClick={() => toggleLike(article)}>
-            <div className="h-full w-full relative">
+            <div className="h-full w-full relative bg-white">
                 {article.thumbnail ? (
                     <div
                         style={{ '--bg-image': `url('${article.thumbnail.source}')` }}
