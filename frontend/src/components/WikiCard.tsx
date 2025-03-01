@@ -4,6 +4,7 @@ import { useLikedArticles } from '../contexts/LikedArticlesContext';
 
 export interface WikiArticle {
     title: string;
+    displaytitle: string;
     extract: string;
     pageid: number;
     url: string;
@@ -25,6 +26,7 @@ export function WikiCard({ article }: WikiCardProps) {
     // Add debugging log
     console.log('Article data:', {
         title: article.title,
+        displaytitle: article.displaytitle,
         pageid: article.pageid
     });
 
@@ -32,7 +34,7 @@ export function WikiCard({ article }: WikiCardProps) {
         if (navigator.share) {
             try {
                 await navigator.share({
-                    title: article.title,
+                    title: article.displaytitle,
                     text: article.extract || '',
                     url: article.url
                 });
@@ -58,8 +60,8 @@ export function WikiCard({ article }: WikiCardProps) {
                         <img
                             loading="lazy"
                             src={article.thumbnail.source}
-                            alt={article.title}
-                            className={`w-full h-full lg:relative lg:inset-1/20 lg:w-9/10 lg:h-9/10 object-cover lg:object-contain transition-opacity duration-300 bg-white lg:bg-transparent ${imageLoaded ? 'opacity-100' : 'opacity-0'
+                            alt={article.displaytitle}
+                            className={`w-full h-full lg:relative lg:inset-1/20 lg:w-9/10 lg:h-9/10 object-cover lg:object-contain transition-opacity duration-300 bg-white lg:bg-transparent ${imageLoaded ? 'opacity-100' : 'opacity-0
                                 }`}
                             onLoad={() => setImageLoaded(true)}
                             onError={(e) => {
@@ -84,7 +86,7 @@ export function WikiCard({ article }: WikiCardProps) {
                             rel="noopener noreferrer"
                             className="hover:text-gray-200 transition-colors"
                         >
-                            <h2 className="text-2xl font-bold drop-shadow-lg">{article.title}</h2>
+                            <h2 className="text-2xl font-bold drop-shadow-lg">{article.displaytitle}</h2>
                         </a>
                         <div className="flex gap-2">
                             <button
