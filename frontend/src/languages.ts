@@ -21,6 +21,13 @@ export const LANGUAGES = [
     article: "https://bn.wikipedia.org/wiki/",
   },
   {
+    id: "ca",
+    name: "Català",
+    flag: "https://hatscripts.github.io/circle-flags/flags/es-ct.svg",
+    api: "https://ca.wikipedia.org/w/api.php?",
+    article: "https://ca.wikipedia.org/wiki/",
+  },
+  {
     id: "cs",
     name: "Čeština",
     flag: "https://hatscripts.github.io/circle-flags/flags/cz.svg",
@@ -84,6 +91,20 @@ export const LANGUAGES = [
     article: "https://el.wikipedia.org/wiki/",
   },
   {
+    id: "gan-hans",
+    name: "赣语（简体）",
+    flag: "https://hatscripts.github.io/circle-flags/flags/cn.svg",
+    api: "https://gan.wikipedia.org/w/api.php?",
+    article: "https://gan.wikipedia.org/wiki/",
+  },
+  {
+    id: "gan-hant",
+    name: "贛語（繁體）",
+    flag: "https://hatscripts.github.io/circle-flags/flags/cn.svg",
+    api: "https://gan.wikipedia.org/w/api.php?",
+    article: "https://gan.wikipedia.org/wiki/",
+  },
+  {
     id: "he",
     name: "עברית",
     flag: "https://hatscripts.github.io/circle-flags/flags/il.svg",
@@ -138,6 +159,13 @@ export const LANGUAGES = [
     flag: "https://hatscripts.github.io/circle-flags/flags/kr.svg",
     api: "https://ko.wikipedia.org/w/api.php?",
     article: "https://ko.wikipedia.org/wiki/",
+  },
+  {
+    id: "ml",
+    name: "മലയാളം",
+    flag: "https://hatscripts.github.io/circle-flags/flags/in.svg",
+    api: "https://ml.wikipedia.org/w/api.php?",
+    article: "https://ml.wikipedia.org/wiki/",
   },
   {
     id: "nl",
@@ -218,7 +246,7 @@ export const LANGUAGES = [
   },
   {
     id: "ur",
-    name: "Pakistan",
+    name: "اردو",
     flag: "https://hatscripts.github.io/circle-flags/flags/pk.svg",
     api: "https://ur.wikipedia.org/w/api.php?",
     article: "https://ur.wikipedia.org/wiki/",
@@ -229,6 +257,27 @@ export const LANGUAGES = [
     flag: "https://hatscripts.github.io/circle-flags/flags/vn.svg",
     api: "https://vi.wikipedia.org/w/api.php?",
     article: "https://vi.wikipedia.org/wiki/",
+  },
+  {
+    id: "wuu-hans",
+    name: "吴语（简体）",
+    flag: "https://hatscripts.github.io/circle-flags/flags/cn.svg",
+    api: "https://wuu.wikipedia.org/w/api.php?",
+    article: "https://wuu.wikipedia.org/wiki/",
+  },
+  {
+    id: "wuu-hant",
+    name: "吳語（繁體）",
+    flag: "https://hatscripts.github.io/circle-flags/flags/cn.svg",
+    api: "https://wuu.wikipedia.org/w/api.php?",
+    article: "https://wuu.wikipedia.org/wiki/",
+  },
+  {
+    id: "yue-hant",
+    name: "粵語（繁體）",
+    flag: "https://hatscripts.github.io/circle-flags/flags/hk.svg",
+    api: "https://zh-yue.wikipedia.org/w/api.php?",
+    article: "https://zh-yue.wikipedia.org/wiki/",
   },
   {
     id: "zh-cn",
@@ -273,10 +322,10 @@ export const LANGUAGES = [
     article: "https://zh.wikipedia.org/wiki/",
   },
   {
-    id: "ca",
-    name: "Català",
-    flag: "https://hatscripts.github.io/circle-flags/flags/es-ct.svg",
-    api: "https://ca.wikipedia.org/w/api.php?",
-    article: "https://ca.wikipedia.org/wiki/",
+    id: "ks",
+    name: "कॉशुर / کٲشُر",
+    flag: "https://hatscripts.github.io/circle-flags/flags/in.svg",
+    api: "https://ks.wikipedia.org/w/api.php?",
+    article: "https://ks.wikipedia.org/wiki/",
   },
 ];
